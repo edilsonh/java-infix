@@ -30,6 +30,12 @@ public class InfixGUI extends JFrame {
     resultPanel.add(resultField);
     add(resultPanel);
 
+    eval.addActionListener(new ActionListener(){
+      public void actionPerformed(ActionEvent e){
+        System.out.println(expressionField.getText());
+      }
+    });
+
     pack();
     setVisible(true);
     setSize(500,150);
