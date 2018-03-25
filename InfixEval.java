@@ -10,11 +10,15 @@ public class InfixEval {
     System.out.println(formattedS);
     for (int i = 0;i<tokens.length;i++) {
       if (isInteger(tokens[i])) {
-        System.out.println("a number");
+        operand.push(tokens[i]);
       } else {
-        System.out.println("something else...");
+        operator.push(tokens[i]);
       }
     }
+    String ggg = Arrays.toString(operand.toArray());
+    System.out.println("Operands: " + ggg);
+    String qqq = Arrays.toString(operator.toArray());
+    System.out.println("Operators: " + qqq);
   }
 
   public static boolean isInteger(String n){
