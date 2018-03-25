@@ -16,9 +16,6 @@ public class InfixEval {
       }
     }
   }
-  public static void printResults(String s){
-    System.out.println(s);
-  }
 
   public static boolean isInteger(String n){
     try {
