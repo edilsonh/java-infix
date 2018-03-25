@@ -32,7 +32,7 @@ public class InfixGUI extends JFrame {
 
     eval.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
-        System.out.println(expressionField.getText());
+        InfixEval.Evaluate(expressionField.getText());
       }
     });
 
