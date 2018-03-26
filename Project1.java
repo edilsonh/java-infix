@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class InfixGUI extends JFrame {
-  public InfixGUI() {
+public class Project1 extends JFrame {
+  public Project1() {
     setTitle("Infix Expression Evaluator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setLocationRelativeTo(null);
@@ -32,7 +32,8 @@ public class InfixGUI extends JFrame {
 
     eval.addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
-        InfixEval.Evaluate(expressionField.getText());
+        int result = InfixEval.Evaluate(expressionField.getText());
+        resultField.setText(String.valueOf(result));
       }
     });
 
@@ -42,6 +43,6 @@ public class InfixGUI extends JFrame {
   }
 
   public static void main(String[] args) {
-    new InfixGUI();
+    new Project1();
   }
 }

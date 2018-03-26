@@ -4,7 +4,7 @@ import javax.swing.*;
 public class InfixEval {
   private static ArrayList<Integer> num = new ArrayList<>();
   private static ArrayList<String> op = new ArrayList<>();
-  public static int Evaluate(String s){
+  public static void Evaluate(String s){
     int result = 0;
     Stack<Integer> operand = new Stack<>();
     Stack<String> operator = new Stack<>();
@@ -33,17 +33,16 @@ public class InfixEval {
     }
     while (!operator.isEmpty()) {
       int oprnd = operand.pop();
+      System.out.println(oprnd);
       String oprtr = operator.pop();
       preparePrecedence(oprnd, oprtr);
       if (operator.isEmpty()) {
-        // the right parentheses is just a place holder
         preparePrecedence(operand.pop(),"(");
-        break;
       }
     }
     result = getResult();
     operand.push(result);
-    return operand.pop();
+    System.out.println(operand.pop());
   }
 
   public static void preparePrecedence(int x, String s){
