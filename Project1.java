@@ -1,3 +1,8 @@
+/*
+* File: Project1.java
+* Author: Edilson Hernandez
+* Date: March 26, 2018
+*/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
