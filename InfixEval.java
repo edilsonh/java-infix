@@ -96,6 +96,8 @@ public class InfixEval {
       System.out.println("Cannot divide by zero!");
       JFrame f = new JFrame();
       JOptionPane.showMessageDialog(f, "Cannot divide by zero, try again!");
+      num.clear();
+      op.clear();
     }
     return rslt;
   }
