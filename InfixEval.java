@@ -1,4 +1,5 @@
 import java.util.*;
+import javax.swing.*;
 
 public class InfixEval {
   public static void Evaluate(String s){
@@ -42,19 +43,26 @@ public class InfixEval {
 
   public static int getResult(int x, int y, String s) {
     int rslt = 0;
-    switch (s) {
-      case "+":
-        rslt = x + y;
-        break;
-      case "-":
-        rslt = x - y;
-        break;
-      case "*":
-        rslt = x * y;
-        break;
-      case "/":
-        rslt = x / y;
-        break;
+    try {
+      switch (s) {
+        case "+":
+          rslt = x + y;
+          break;
+        case "-":
+          rslt = x - y;
+          break;
+        case "*":
+          rslt = x * y;
+          break;
+        case "/":
+          rslt = x / y;
+          break;
+      }
+    } catch (Exception e) {
+      System.out.println(e);
+      System.out.println("Cannot divide by zero!");
+      JFrame f = new JFrame();
+      JOptionPane.showMessageDialog(f, "Cannot divide by zero, try again!");
     }
     return rslt;
   }
